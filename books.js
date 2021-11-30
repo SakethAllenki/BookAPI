@@ -17,7 +17,7 @@ router.get('/:id', (req, res) => {
 // Get a specific book by author and year
 router.get('/authorYear/:author/:year', (req, res) => {
   const { author, year } = req.params;
-  res.json(books.filter((ele) => (ele.author === author) && (ele.year_written === year)));
+  res.json(books.filter((ele) => (ele.author === author) && (ele.year_written == year)));
 });
 
 // Get a specific book by rating
